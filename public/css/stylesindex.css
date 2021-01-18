@@ -1,1 +1,65 @@
 .barmenu{background-color: #EA7A0C;}
+.franja{
+    background-color: #EA7A0C;
+    height: 70PX;
+    width: 100%;
+}
+
+.logo{
+    height: 65px;
+    width: 180px;
+}
+
+.imgcategoria:hover{filter: blur(6px);}
+
+.textoimg{
+    position: absolute;
+    left: 25%;
+    line-height: 270px;
+    text-align: center;
+    color: rgba(85, 85, 85, 0);
+    font-family: 'Exo';
+    text-transform: uppercase;
+    top: 0;
+    transition: all .23s ease;
+    height: 70px;
+}
+
+.textoimg1{
+    position: absolute;
+    left: 25%;
+    line-height: 370px;
+    text-align: center;
+    color: rgba(85, 85, 85, 0);
+    font-family: 'Exo';
+    text-transform: uppercase;
+    top: 0;
+    transition: all .23s ease;
+    height: 70px;
+}
+
+.textoimg:hover{
+    position: absolute;
+    left: 25%;
+    line-height: 270px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Exo';
+    text-transform: uppercase;
+    top: 0;
+    transition: all .23s ease;
+    height: 50px;
+}
+
+.textoimg1:hover{
+    position: absolute;
+    left: 25%;
+    line-height: 370px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Exo';
+    text-transform: uppercase;
+    top: 0;
+    transition: all .23s ease;
+    height: 50px;
+}
