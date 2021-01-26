@@ -163,23 +163,32 @@
                 </ul>
 
             </nav>
-
-<div class="row mt-5">
-    <div class="container-fluid">
-        <div class="col-2">
-            <img src="" alt="">
+<div class="container-fluid">
+    <div class="row mt-5">    
+        <div class="col-lg-2">
+            <a href=""><img src="https://www.legitreviews.com/wp-content/uploads/2015/09/evga-gtx960-ssc-4gb.jpg" height="100px" width="100px" alt=""></a><br>
+            <a href=""><img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo1.jpg?raw=true" height="100px" width="100px" alt=""></a><br>
+            <a href=""><img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo2.jpg?raw=true" height="100px" width="100px" alt=""></a><br>
+            <a href=""><img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo3.jpg?raw=true" height="100px" width="100px" alt=""></a><br>
+            <a href=""><img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo4.jpg?raw=true" height="100px" width="100px" alt=""></a>
         </div>
-        <div class="col-8">
+        <div class="col-lg-7">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="https://www.legitreviews.com/wp-content/uploads/2015/09/evga-gtx960-ssc-4gb.jpg" height="500px" width="500px" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo1.jpg?raw=true" height="500px" width="500px" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo2.jpg?raw=true" height="500px" width="500px" class="d-block" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo3.jpg?raw=true" height="500px" width="500px" class="d-block" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo4.jpg?raw=true" height="500px" width="500px" class="d-block" alt="...">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
@@ -192,9 +201,13 @@
             </a>
             </div>
         </div>
+        <div class="col-lg-2">
+            <h3 class="text">Tarjeta Gráfica</h3><small class="text-muted">Usado</small><br>
+            <p class="display-4">$ 365,000</p>
+        </div>
     
     </div>
-
+    <hr>
 </div>
 
 
