@@ -235,7 +235,7 @@
             <?php if($producto["categoria"]==5 || $producto["categoria"]==2){ ?>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="<?= $producto["foto"] ?>" alt=""></a>
+              <a href="<?php echo(base_url("public/detalle/producto/".$producto["id"])) ?>"><img class="card-img-top" src="<?= $producto["foto"] ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?= $producto["nombre"]?></a>

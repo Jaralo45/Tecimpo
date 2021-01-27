@@ -9,13 +9,13 @@ class DetalleController extends BaseController
 		return view('DetalleProducto');
 	}
 
-	public function buscar(){
+	public function buscar($id){
 
 		$modeloListado= new Modelolistado();
 
 		try{
 
-		$datosConsultados=$modeloListado->findAll();
+		$datosConsultados=$modeloListado->where('id',$id)->findAll();
 
 		$datosParaVista=array("productos"=>$datosConsultados);
 

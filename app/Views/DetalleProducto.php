@@ -11,10 +11,10 @@
   <title>Detalle - producto Tecimpo</title>
 
   <link rel="icon" href="<?php echo(base_url("public/img/la t.png"))?>">
-
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
   <!-- Bootstrap core CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
 <link
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -30,7 +30,7 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand navbar-light barmenu topbar mb-4 static-top shadow">
-            <div class="container">
+            <div class="container-fluid">
       <a class="navbar-brand" href="<?php echo(base_url("public/")); ?>"><img src="<?php echo(base_url("public/img/logo.png")); ?>" class="logo" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categorías
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -52,162 +52,101 @@
           </ul>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo(base_url("public/productos/nuevos")) ?>">Nuevos</a>
+            <a class="nav-link text-white" href="<?php echo(base_url("public/productos/nuevos")) ?>">Nuevos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo(base_url("public/productos/usados")) ?>">Usados</a>
+            <a class="nav-link text-white" href="<?php echo(base_url("public/productos/usados")) ?>">Usados</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contáctanos</a>
+            <a class="nav-link text-white" href="#">Contáctanos</a>
           </li>
         </ul>
       </div>
     </div>
-                <!-- Topbar Navbar -->
-                <ul class="navbar-nav ml-auto">
-
-                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                    <li class="nav-item dropdown no-arrow d-sm-none">
-                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <!-- Dropdown - Messages -->
-                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                            aria-labelledby="searchDropdown">
-                            <form class="form-inline mr-auto w-100 navbar-search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control bg-light border-0 small"
-                                        placeholder="Search for..." aria-label="Search"
-                                        aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="button">
-                                            <i class="fas fa-search fa-sm"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-
-                    <!-- Nav Item - Alerts -->
-                    <li class="nav-item dropdown no-arrow mx-1">
-                        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-heart text-dark"></i>
-                            <!-- Counter - Alerts -->
-                        </a>
-                        
-
-                    <!-- Nav Item - Messages -->
-                    <li class="nav-item dropdown no-arrow mx-1">
-                        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-shopping-cart text-dark"></i>
-                            <!-- Counter - Messages -->
-                            <span class="badge badge-danger badge-counter">1</span>
-                        </a>
-                        <!-- Dropdown - Messages -->
-                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                            aria-labelledby="messagesDropdown">
-                            <h6 class="dropdown-header">
-                                Carrito de Compras
-                            </h6>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <div class="dropdown-list-image mr-3">
-                                    <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                        alt="">
-                                </div>
-                                <div class="font-weight-bold">
-                                    <div class="text-truncate">Huawei P30 Pro de 256GB y 8 GB de Ram.</div>
-                                </div>
-                            </a>
-
-                            <a class="dropdown-item text-center small text-gray-500" href="#">Abrir carrito</a>
-                        </div>
-                    </li>
-
-                    <div class="topbar-divider d-none d-sm-block"></div>
-
-                    <!-- Nav Item - User Information -->
-                    <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-light-600 small">Login</span>
-                            <img class="img-profile rounded-circle"
-                                src="<?php echo(base_url("public/img/undraw_profile.svg"));?>">
-                        </a>
-                        <!-- Dropdown - User Information -->
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                            aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Profile
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Settings
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Activity Log
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
-                            </a>
-                        </div>
-                    </li>
-
-                </ul>
-
             </nav>
+
+<nav aria-label="breadcrumb">
+<?php foreach($productos as $producto):?>
+  <ol class="breadcrumb bg-white">
+    <li class="breadcrumb-item"><a href="<?php echo(base_url("public/productos/usados"));?>">Volver al listado</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><?php 
+                                                  if($producto["categoria"]==0){
+                                                    echo("No Aplica");
+                                                  }else if($producto["categoria"]==1){
+                                                    echo("Celulares Nuevos");
+                                                  }else if($producto["categoria"]==2){
+                                                    echo("Celulares Usados");
+                                                  }else if($producto["categoria"]==3){
+                                                    echo("Accesorios");
+                                                  }else if($producto["categoria"]==4){
+                                                    echo("Otros Nuevos");
+                                                  }else if($producto["categoria"]==5){
+                                                    echo("Otros Usados");
+                                                  }
+                                                ?></li>
+  </ol>
+<?php endforeach ?>
+</nav>
 <div class="container-fluid">
+<?php foreach($productos as $producto):?>
     <div class="row mt-5">    
         <div class="col-lg-2">
-            <a href=""><img src="https://www.legitreviews.com/wp-content/uploads/2015/09/evga-gtx960-ssc-4gb.jpg" height="100px" width="100px" alt=""></a><br>
-            <a href=""><img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo1.jpg?raw=true" height="100px" width="100px" alt=""></a><br>
-            <a href=""><img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo2.jpg?raw=true" height="100px" width="100px" alt=""></a><br>
-            <a href=""><img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo3.jpg?raw=true" height="100px" width="100px" alt=""></a><br>
-            <a href=""><img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo4.jpg?raw=true" height="100px" width="100px" alt=""></a>
+            <a href=""><img src="<?= $producto["foto"]?>" height="100px" width="100px" alt=""></a><br>
+            <a href=""><img src="<?= $producto["foto2"]?>" height="100px" width="100px" alt=""></a><br>
+            <a href=""><img src="<?= $producto["foto3"]?>" height="100px" width="100px" alt=""></a><br>
+            <a href=""><img src="<?= $producto["foto4"]?>" height="100px" width="100px" alt=""></a><br>
+            <a href=""><img src="<?= $producto["foto5"]?>" height="100px" width="100px" alt=""></a>
         </div>
         <div class="col-lg-7">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="https://www.legitreviews.com/wp-content/uploads/2015/09/evga-gtx960-ssc-4gb.jpg" height="500px" width="500px" class="d-block" alt="...">
+                <img src="<?= $producto["foto"]?>" height="500px" width="500px" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo1.jpg?raw=true" height="500px" width="500px" class="d-block" alt="...">
+                <img src="<?= $producto["foto2"]?>" height="500px" width="500px" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo2.jpg?raw=true" height="500px" width="500px" class="d-block" alt="...">
+                <img src="<?= $producto["foto3"]?>" height="500px" width="500px" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo3.jpg?raw=true" height="500px" width="500px" class="d-block" alt="...">
+                <img src="<?= $producto["foto4"]?>" height="500px" width="500px" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="https://github.com/Jaralo45/fotostecimpo/blob/main/ejemplo4.jpg?raw=true" height="500px" width="500px" class="d-block" alt="...">
+                <img src="<?= $producto["foto5"]?>" height="500px" width="500px" class="d-block" alt="...">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a>
             </div>
         </div>
-        <div class="col-lg-2">
-            <h3 class="text">Tarjeta Gráfica</h3><small class="text-muted">Usado</small><br>
-            <p class="display-4">$ 365,000</p>
+        <div class="col-lg-3">
+            <h3 class="text"><?= $producto["nombre"]?></h3><small class="text-muted"><?php 
+                                                  if($producto["categoria"]==0){
+                                                    echo("No Aplica");
+                                                  }else if($producto["categoria"]==1){
+                                                    echo("Nuevo");
+                                                  }else if($producto["categoria"]==2){
+                                                    echo("Usado");
+                                                  }else if($producto["categoria"]==3){
+                                                    echo("Nuevo");
+                                                  }else if($producto["categoria"]==4){
+                                                    echo("Nuevo");
+                                                  }else if($producto["categoria"]==5){
+                                                    echo("Usado");
+                                                  }
+                                                ?></small><br>
+            <p class="display-4">$ <?= number_format($producto["valor"])?></p>
+            <hr>
+            <br>
+            <p><i class="fas fa-shipping-fast fa-lg"></i>&nbsp;&nbsp; Envíos a Medellin $10,000 fuera $15,000</p>
+            <p><i class="fas fa-dolly fa-lg"></i>&nbsp;&nbsp; Pago contra entrega solo en medelin</p>
+            <br>
+            <p><i class="fas fa-shield-alt fa-lg text-success"></i>&nbsp;&nbsp; 100% Producto recomendado</p>
+            <p class="text-warning h1">&nbsp;&nbsp; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
         </div>
     
     </div>
     <hr>
+    <?php endforeach ?>
 </div>
 
 

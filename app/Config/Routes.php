@@ -38,7 +38,7 @@ $routes->get('/otros/usados', 'OtrosUsadoController::buscar');
 $routes->get('/otros/nuevos', 'OtrosNuevoController::buscar');
 $routes->get('/productos/nuevos', 'NuevosController::buscar');
 $routes->get('/productos/usados', 'UsadosController::buscar');
-$routes->get('/detalle/producto', 'DetalleController::buscar');
+$routes->get('/detalle/producto/(:any)', 'DetalleController::buscar/$1');
 $routes->get('/cambio_de_contraseña', 'CambioContraseñaController::index');
 $routes->get('/inicio_de_sesion', 'LoginController::index');
 $routes->get('/registro/productos', 'RegistroController::buscar');
