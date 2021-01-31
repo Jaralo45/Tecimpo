@@ -129,7 +129,8 @@
                                 </div>
                                 <form method="POST" action="<?php echo(base_url("public/registro/productos"))?>">
                                 <div class="modal-body bg-secondary p-5 form-registro">
-                                        <div class="form-group">
+                                <div class="row mt-3">
+                                        <div class="col-12 col-md-6">
                                           <select class="form-control" name="categoria">
                                               <option value="0">Seleccione Categoria</option>
                                               <option value="1">Celular Nuevo</option>
@@ -139,20 +140,38 @@
                                               <option value="5">Otros Usado</option>
                                           </select>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Nombre de Producto" name="nombre">
+                                        <div class="col-12 col-md-6">
+                                            <input type="text" class="form-control" placeholder="Nombre de Producto" name="nombre" maxlength="18">
+                                        </div>
+                                </div>
+                                        <div class="form-group mt-3">
+                                            <input type="text" class="form-control" placeholder="Descripción Breve" name="descripcion" maxlength="30">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Descripción" name="descripcion">
+                                            <textarea class="form-control" rows="3" name="detalle" placeholder="Descripción Detallada"></textarea>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="row mt-3">
+                                        <div class="col-12 col-md-6">
                                           <input type="text" class="form-control" placeholder="Valor Producto" name="valor">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="col-12 col-md-6">
                                           <input type="number" class="form-control" placeholder="Cantidad" name="cantidad">
                                         </div>
+                                        </div>
+                                        <div class="form-group mt-3">
+                                          <input type="text" class="form-control" placeholder="Url de la foto Principal" name="foto">
+                                        </div>
                                         <div class="form-group">
-                                          <input type="text" class="form-control" placeholder="Url de la foto" name="foto">
+                                          <input type="text" class="form-control" placeholder="Url de la foto 2" name="foto2">
+                                        </div>
+                                        <div class="form-group">
+                                          <input type="text" class="form-control" placeholder="Url de la foto 3" name="foto3">
+                                        </div>
+                                        <div class="form-group">
+                                          <input type="text" class="form-control" placeholder="Url de la foto 4" name="foto4">
+                                        </div>
+                                        <div class="form-group">
+                                          <input type="text" class="form-control" placeholder="Url de la foto 5" name="foto5">
                                         </div>
                                         
                                 </div>
@@ -281,7 +300,7 @@
                                                 <td><?= $producto["fecharegistro"]?></td>
                                                 <td>
                                                 <a href="" title="Eliminar" class="btn"data-toggle="modal" data-target="#eliminarModal<?php echo($producto["id"])?>"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a>
-                                                <a type="button" class="btn" title="Editar" data-toggle="modal" data-target="#editar<?php echo($producto["id"])?>"><i class="fa fa-sticky-note text-primary" aria-hidden="true"></i></a>
+                                                <a type="button" class="btn" title="Editar" data-toggle="modal" data-target="#editar<?php echo($producto["id"])?>"><i class="fas fa-edit" aria-hidden="true"></i></a>
                                                 </td>                                                
                                             </tr>
                                             <!-- Eliminar Modal-->
@@ -308,40 +327,68 @@
                                             <div class="modal fade" id="editar<?php echo($producto["id"])?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
-                                                            <div class="modal-header bg-dark text-light">
+                                                            <div class="modal-header bg-warning text-dark">
                                                                 <h5 class="modal-title" id="exampleModalLabel">Edición de Animal</h5>
                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                 </button>
                                                             </div>
-                                                            <div class="modal-body form-registro">
+                                                            <div class="modal-body form-registro bg-light">
                                                                 <form action="<?php echo(base_url("public/registro/editar/".$producto["id"]))?>" method="POST">
-                                                                    <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-12 col-md-6">
                                                                         <label>Categoria:</label>
                                                                         <input type="text" class="form-control" value="<?= $producto["categoria"] ?>" name="categoriaEditar">
                                                                     </div>
-                                                                    <div class="form-group">
+                                                                    <div class="col-12 col-md-6">
                                                                         <label>Nombre:</label>
-                                                                        <input type="text" class="form-control" value="<?= $producto["nombre"] ?>" name="nombreEditar">
+                                                                        <input type="text" class="form-control" value="<?= $producto["nombre"] ?>" name="nombreEditar" maxlength="18">
+                                                                    </div>
+                                                                </div>
+                                                                    <div class="form-group">
+                                                                        <label>Descripcion Breve:</label>
+                                                                        <input type="text" class="form-control" value="<?= $producto["descripcion"] ?>" name="descripcionEditar" maxlength="30">
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <label>Descripcion:</label>
-                                                                        <input type="text" class="form-control" value="<?= $producto["descripcion"] ?>" name="descripcionEditar">
-                                                                    </div>
-                                                                    <div class="form-group">
+                                                                        <label>Descripcion Detallada:</label>
+                                                                        <textarea class="form-control" rows="3" name="detalleEditar"><?= $producto["detalle"] ?></textarea>
+                                                                    </div>  
+                                                                    <div class="row">
+                                                                    <div class="col-12 col-md-6">
                                                                         <label>Valor:</label>
                                                                             <input class="form-control" type="text" name="valorEditar" value="<?= $producto["valor"] ?>">
                                                                     </div>
-                                                                    <div class="form-group">
+                                                                    <div class="col-12 col-md-6">
                                                                         <label>Cantidad:</label>
                                                                             <input class="form-control" type="text" name="cantidadEditar" value="<?= $producto["cantidad"] ?>">
                                                                     </div>
+                                                                    </div>
                                                                     <div class="form-group">
-                                                                        <label>Foto:</label>
+                                                                        <label>Foto Principal:</label>
                                                                             <input class="form-control" type="text" name="fotoEditar" value="<?= $producto["foto"] ?>">
                                                                     </div>
-                                                                    <div class="modal-footer bg-dark text-light">
-                                                                            <a type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</a>
+                                                                    <div class="row">
+                                                                    <div class="col-12 col-md-6">
+                                                                        <label>Foto 2:</label>
+                                                                            <input class="form-control" type="text" name="foto2Editar" value="<?= $producto["foto2"] ?>">
+                                                                    </div>
+                                                                    <div class="col-12 col-md-6">
+                                                                        <label>Foto 3:</label>
+                                                                            <input class="form-control" type="text" name="foto3Editar" value="<?= $producto["foto3"] ?>">
+                                                                    </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                    <div class="col-12 col-md-6">
+                                                                        <label>Foto 4:</label>
+                                                                            <input class="form-control" type="text" name="foto4Editar" value="<?= $producto["foto4"] ?>">
+                                                                    </div>
+                                                                    <div class="col-12 col-md-6">
+                                                                        <label>Foto 5:</label>
+                                                                            <input class="form-control" type="text" name="foto5Editar" value="<?= $producto["foto5"] ?>">
+                                                                    </div>
+                                                                    </div>
+                                                                    <div class="modal-footer bg-warning text-dark mt-3">
+                                                                            <a type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</a>
                                                                             <button type="submit" class="btn btn-success">Guardar</button>
                                                                     </div>
                                                                         

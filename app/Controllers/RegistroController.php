@@ -33,16 +33,26 @@ class RegistroController extends BaseController
 
 		$nombre=$this->request->getPost("nombre");
 		$descripcion=$this->request->getPost("descripcion");
+		$detalle=$this->request->getPost("detalle");
 		$valor=$this->request->getPost("valor");
 		$cantidad=$this->request->getPost("cantidad");
 		$foto=$this->request->getPost("foto");
+		$foto2=$this->request->getPost("foto2");
+		$foto3=$this->request->getPost("foto3");
+		$foto4=$this->request->getPost("foto4");
+		$foto5=$this->request->getPost("foto5");
 
 		$datosEnvio=array(
 			"nombre"=>$nombre,
 			"descripcion"=>$descripcion,
+			"detalle"=>$detalle,
 			"valor"=>$valor,
 			"cantidad"=>$cantidad,
-			"foto"=>$foto
+			"foto"=>$foto,
+			"foto2"=>$foto2,
+			"foto3"=>$foto3,
+			"foto4"=>$foto4,
+			"foto5"=>$foto5
 		);
 
 		$modeloListado= new Modelolistado();
@@ -84,17 +94,27 @@ class RegistroController extends BaseController
 		$categoria=$this->request->getPost("categoriaEditar");
 		$nombre=$this->request->getPost("nombreEditar");
 		$descripcion=$this->request->getPost("descripcionEditar");
+		$detalle=$this->request->getPost("detalleEditar");
 		$valor=$this->request->getPost("valorEditar");
 		$cantidad=$this->request->getPost("cantidadEditar");
 		$foto=$this->request->getPost("fotoEditar");
+		$foto2=$this->request->getPost("foto2Editar");
+		$foto3=$this->request->getPost("foto3Editar");
+		$foto4=$this->request->getPost("foto4Editar");
+		$foto5=$this->request->getPost("foto5Editar");
 
 		$datosEnvio=array(
 			"nombre"=>$nombre,
 			"descripcion"=>$descripcion,
+			"detalle"=>$detalle,
 			"valor"=>$valor,
 			"cantidad"=>$cantidad,
 			"foto"=>$foto,
-			"categoria"=>$categoria
+			"categoria"=>$categoria,
+			"foto2"=>$foto2,
+			"foto3"=>$foto3,
+			"foto4"=>$foto4,
+			"foto5"=>$foto5
 		);
 
 		$modeloListado= new Modelolistado();

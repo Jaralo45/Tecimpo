@@ -6,8 +6,8 @@
 }
 
 .logo{
-    height: 65px;
-    width: 180px;
+    height: 55px;
+    width: 60px;
 }
 
 .imgcategoria:hover{filter: blur(6px);}
@@ -63,3 +63,23 @@
     transition: all .23s ease;
     height: 50px;
 }
+
+.menuletra li a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+}
+
+a{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+
+.card-title a{color: rgb(168, 110, 2);}
+
+#pedido{
+    background-color: #EA7A0C;
+    border-color: #EA7A0C;
+}
+
+.vlistado{color: rgb(34, 33, 39);}
+.vlistado:hover{color:  #EA7A0C;}
+
+
+
