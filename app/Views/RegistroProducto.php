@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Tablero de Control</title>
+        <title>Registro - Tablero de Control</title>
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-        <link href="<?php echo(base_url("public/css/styles.css"))?>" rel="stylesheet" />
+        <link href="<?php echo(base_url("public/css/dash.css"))?>" rel="stylesheet" />
         <link rel="icon" href="<?php echo(base_url("public/img/la t.png"))?>">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
@@ -63,6 +63,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Tablero de Control
                             </a>
+                            <a class="nav-link" href="<?php echo(base_url("public/pedidos")) ?>">
+                                <div class="sb-nav-link-icon"><i class="far fa-folder-open"></i></div>
+                                Pedidos
+                            </a>
                             <div class="sb-sidenav-menu-heading">INTERFAZ</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -105,7 +109,7 @@
                     <div class="container-fluid">
                         <h1 class="mt-4">Tablero de Control</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Tablero</li>
+                            <li class="breadcrumb-item active">Registros</li>
                         </ol>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">

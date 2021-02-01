@@ -47,8 +47,8 @@
             <li><hr class="dropdown-divider bg-white"></li>
             <li><a class="dropdown-item text-white" href="<?php echo(base_url("public/accesorios")) ?>">Accesorios</a></li>
             <li><hr class="dropdown-divider bg-white"></li>
-            <li><a class="dropdown-item text-white" href="#">Otros Nuevos</a></li>
-            <li><a class="dropdown-item text-white" href="#">Otros Usados</a></li>
+            <li><a class="dropdown-item text-white" href="<?php echo(base_url("public/otros/nuevos")) ?>">Otros Nuevos</a></li>
+            <li><a class="dropdown-item text-white" href="<?php echo(base_url("public/otros/usados")) ?>">Otros Usados</a></li>
           </ul>
         </li>
           <li class="nav-item">
@@ -94,8 +94,8 @@
             Otros
           </a>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">Nuevos</a></li>
-            <li><a class="dropdown-item" href="#">Usados</a></li>
+          <li><a class="dropdown-item" href="<?php echo(base_url("public/otros/nuevos")) ?>">Nuevos</a></li>
+            <li><a class="dropdown-item" href="<?php echo(base_url("public/otros/usados")) ?>">Usados</a></li>
           </ul>
         </div>
         </div>

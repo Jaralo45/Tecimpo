@@ -8,38 +8,57 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Tecimpo</title>
+  <title>Celulares - Nuevos Tecimpo</title>
 
   <link rel="icon" href="<?php echo(base_url("public/img/la t.png"))?>">
 
   <!-- Bootstrap core CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+<link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="<?php echo(base_url("public/css/shop-homepage.css"))?>" rel="stylesheet">
-
+  <link href="<?php echo(base_url("public/css/sb-admin-2.min.css"));?>" rel="stylesheet">
+  <link href="<?php echo(base_url("public/css/stylesindex.css"))?>" rel="stylesheet" />
+  <link href="<?php echo(base_url("public/css/styles.css"));?>" rel="stylesheet" />
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Bienvenido</a>
+  <nav class="navbar navbar-expand-lg navbar-light barmenu">
+      <div class="container-fluid">
+      <a class="navbar-brand" href="<?php echo(base_url("public/")); ?>"><img src="<?php echo(base_url("public/img/logon.png")); ?>" class="logo" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="<?php echo(base_url("public/")) ?>">Inicio</a>
+      <div class="collapse navbar-collapse menuletra" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorías
+          </a>
+          <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item text-white" href="<?php echo(base_url("public/celulares/nuevos")) ?>">Celulares Nuevos</a></li>
+            <li><a class="dropdown-item text-white" href="<?php echo(base_url("public/celulares/usados")) ?>">Celulares Usados</a></li>
+            <li><hr class="dropdown-divider bg-white"></li>
+            <li><a class="dropdown-item text-white" href="<?php echo(base_url("public/accesorios")) ?>">Accesorios</a></li>
+            <li><hr class="dropdown-divider bg-white"></li>
+            <li><a class="dropdown-item text-white" href="<?php echo(base_url("public/otros/nuevos")) ?>">Otros Nuevos</a></li>
+            <li><a class="dropdown-item text-white" href="<?php echo(base_url("public/otros/usados")) ?>">Otros Usados</a></li>
+          </ul>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="<?php echo(base_url("public/productos/nuevos")) ?>">Nuevos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo(base_url("public/productos/nuevos")) ?>">Nuevos</a>
+            <a class="nav-link text-white" href="<?php echo(base_url("public/productos/usados")) ?>">Usados</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo(base_url("public/productos/usados")) ?>">Usados</a>
+            <a class="nav-link text-white" href="#">Contáctanos</a>
           </li>
         </ul>
       </div>
@@ -47,17 +66,17 @@
   </nav>
 
   <!-- Page Content -->
-  <div class="container">
+  <div class="container-fluid">
 
     <div class="row">
 
-      <div class="col-lg-3">
+      <div class="col-lg-2">
 
-        <h1 class="my-4"><img src="<?php echo(base_url("public/img/nombre.png"))  ?>" height="100px" width="300px" alt=""></h1>
+        <h1 class="my-4"><img src="<?php echo(base_url("public/img/logo.png"))  ?>" class="w-100" alt="" class="rounded"></h1>
         <div class="list-group">
         <div class="categoria bg-dark p-3 rounded text-light">
-        <h5>Categoria</h5>
-
+        <h5 class="text-center mt-3">CATEGORÍAS</h5>
+        <hr class="dropdown-divider bg-white mt-4">
         <div class="dropdown">
         <a class="btn  dropdown-toggle text-light" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           Celulares
@@ -67,8 +86,9 @@
             <li><a class="dropdown-item" href="<?php echo(base_url("public/celulares/usados")) ?>">Usados</a></li>
           </ul>
         </div>
-
+        <hr class="dropdown-divider bg-white">
           <a href="<?php echo(base_url("public/accesorios")) ?>" class="btn text-light">Accesorios</a>
+        <hr class="dropdown-divider bg-white">
         <div class="dropdown">
           <a class="btn  dropdown-toggle text-light" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
             Otros
@@ -83,51 +103,23 @@
       </div>
       <!-- /.col-lg-3 -->
 
-      <div class="col-lg-9">
+      <div class="col-lg-10 mt-4">
 
-        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <img class="d-block img-fluid" src="<?php echo(base_url("public/img/1.jpg"))?>" alt="First slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="<?php echo(base_url("public/img/2.jpg"))?>" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="<?php echo(base_url("public/img/3.jpg"))?>" alt="Third slide">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only"></span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only"></span>
-          </a>
-        </div>
 
         <div class="row">
           <?php foreach($productos as $producto):?>
             <?php if($producto["categoria"]==4){ ?>
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="<?= $producto["foto"] ?>" alt=""></a>
+              <a href="<?php echo(base_url("public/detalle/producto/".$producto["id"])) ?>"><img class="card-img-top" src="<?= $producto["foto"] ?>" height="300px" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?= $producto["nombre"]?></a>
+                  <a href="<?php echo(base_url("public/detalle/producto/".$producto["id"])) ?>"><?= $producto["nombre"]?></a>
                 </h4>
                 <h5>$ <?= number_format($producto["valor"])?></h5>
                 <p class="card-text"><?= $producto["descripcion"]?></p>
               </div>
-              <div class="card-footer">
-                <small class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
+
             </div>
           </div>
           <?php } ?>
@@ -149,7 +141,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Tecimpo <?php echo date("Y") ?></p>
+      <p class="m-0 text-center text-white">Copyright &copy; Tecimpo 2020</p>
     </div>
     <!-- /.container -->
   </footer>

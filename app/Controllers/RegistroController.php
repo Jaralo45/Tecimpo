@@ -1,6 +1,5 @@
 <?php namespace App\Controllers;
 
-use App\Models\Modelogeneral;
 use App\Models\Modelolistado;
 
 
@@ -56,11 +55,9 @@ class RegistroController extends BaseController
 		);
 
 		$modeloListado= new Modelolistado();
-		$modeloGeneral= new Modelogeneral();
 
 		try{
 			$modeloListado->insert($datosEnvio);
-			$modeloGeneral->insert($datosEnvio);
 			
 			$mensaje="Producto registrado con exito!! ";
 			return redirect()->to(base_url("public/registro/productos"))->with('mensaje',$mensaje);

@@ -181,7 +181,7 @@
     </div>
     <br>
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                        <form class="frmpedido" id="contactForm" name="sentMessage" novalidate="novalidate" method="POST" action="">
+                        <form class="frmpedido" id="contactForm" name="sentMessage" novalidate="novalidate" method="POST" action="<?php echo(base_url("public/pedido/nuevo"))?>">
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Nombre</label>
@@ -198,6 +198,13 @@
                             </div>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Cantidad</label>
+                                    <input class="form-control" id="phone" type="number" name="cantidad" placeholder="Cantidad" required="required" data-validation-required-message="Por favor ingrese la cantidad." />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Teléfono</label>
                                     <input class="form-control" id="phone" type="tel" name="telefono" placeholder="Teléfono" required="required" data-validation-required-message="Por favor ingrese su teléfono." />
                                     <p class="help-block text-danger"></p>
@@ -205,21 +212,49 @@
                             </div>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Dirección</label>
-                                    <input class="form-control" id="phone" type="tel" name="telefono" placeholder="Ejemplo... calle 56 #..." required="required" data-validation-required-message="Por favor ingrese su teléfono." />
+                                    <label>Ciudad</label>
+                                    <input class="form-control" id="phone" type="text" name="ciudad" placeholder="Ciudad o Municipio" required="required" data-validation-required-message="Por favor ingrese la ciudad o municipio." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Especificación de dirección</label>
-                                    <textarea class="form-control" id="message" rows="5" name="mensaje" placeholder="Ejemplo.. al frente de la panadería las vegas" data-validation-required-message="Por favor ingrese su mensaje."></textarea>
+                                    <label>Dirección</label>
+                                    <input class="form-control" id="phone" type="text" name="direccion" placeholder="Ejemplo... calle 56 #..." required="required" data-validation-required-message="Por favor ingrese su dirección." />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Punto de Referencia</label>
+                                    <input class="form-control" id="phone" type="text" name="referencia" placeholder="Referencia... ejemplo, al frente de la panadería las vegas..." required="required" data-validation-required-message="Por favor ingrese su punto de referencia." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <br />
                             <div id="success"></div>
                             <div class="d-grid gap-2"><button class="btn btn-primary btn-xl" id="pedido" type="submit">Hacer pedido</button></div>
+
+                        <!--Modal-->
+                        <div class="modal fade" id="eliminarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">×</span>
+                                                            </button>
+                                                        </div>
+                                                        <input class="form-control" id="phone" type="text" name="producto" value="<?= $producto["nombre"]?>"/>
+                                                        <input class="form-control" id="phone" type="text" name="valor" value="<?= $producto["valor"]?>"/>
+                                                        <div class="modal-footer">
+                                                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                                                            <a class="btn btn-danger" href="<?php echo(base_url("public/registro/eliminar/".$producto["id"])) ?>">Eliminar</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+
                         </form>
                         <h4><?php session('mensaje') ?></h4>
                         <?php  if(session('mensaje')):?>

@@ -39,12 +39,16 @@ $routes->get('/otros/nuevos', 'OtrosNuevoController::buscar');
 $routes->get('/productos/nuevos', 'NuevosController::buscar');
 $routes->get('/productos/usados', 'UsadosController::buscar');
 $routes->get('/detalle/producto/(:any)', 'DetalleController::buscar/$1');
+$routes->post('/pedido/nuevo', 'DetalleController::registrar');
+
 $routes->get('/cambio_de_contraseña', 'CambioContraseñaController::index');
 $routes->get('/inicio_de_sesion', 'LoginController::index');
+
 $routes->get('/registro/productos', 'RegistroController::buscar');
 $routes->post('/registro/productos', 'RegistroController::registrar');
 $routes->get('/registro/eliminar/(:any)', 'RegistroController::eliminar/$1');
 $routes->post('/registro/editar/(:any)', 'RegistroController::editar/$1');
+$routes->get('/pedidos', 'PedidosController::buscar');
 
 $routes->post('/inicio_de_sesion', 'LoginController::login');
 
