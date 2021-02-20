@@ -58,7 +58,7 @@
             <a class="nav-link text-white" href="<?php echo(base_url("public/productos/usados")) ?>">Usados</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Contáctanos</a>
+            <a class="nav-link text-white" href="<?php echo(base_url("public/contacto")) ?>">Contáctanos</a>
           </li>
         </ul>
       </div>
@@ -73,33 +73,50 @@
       <div class="col-lg-2">
 
         <h1 class="my-4"><img src="<?php echo(base_url("public/img/logo.png"))  ?>" class="w-100" alt="" class="rounded"></h1>
-        <div class="list-group">
         <div class="categoria bg-dark p-3 rounded text-light">
         <h5 class="text-center mt-3">CATEGORÍAS</h5>
         <hr class="dropdown-divider bg-white mt-4">
-        <div class="dropdown">
-        <a class="btn  dropdown-toggle text-light" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-          Celulares
-        </a>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="<?php echo(base_url("public/celulares/nuevos")) ?>">Nuevos</a></li>
-            <li><a class="dropdown-item" href="<?php echo(base_url("public/celulares/usados")) ?>">Usados</a></li>
-          </ul>
-        </div>
-        <hr class="dropdown-divider bg-white">
-          <a href="<?php echo(base_url("public/accesorios")) ?>" class="btn text-light">Accesorios</a>
-        <hr class="dropdown-divider bg-white">
-        <div class="dropdown">
-          <a class="btn  dropdown-toggle text-light" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-            Otros
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="<?php echo(base_url("public/otros/nuevos")) ?>">Nuevos</a></li>
-            <li><a class="dropdown-item" href="<?php echo(base_url("public/otros/usados")) ?>">Usados</a></li>
-          </ul>
-        </div>
-        </div>
-        </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header text-light" id="flush-headingOne">
+      <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Celulares
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <a class="btn text-light" href="<?php echo(base_url("public/celulares/nuevos")) ?>">Nuevos</a>
+        <a class="btn text-light" href="<?php echo(base_url("public/celulares/usados")) ?>">Usados</a>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Otros
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <a class="btn text-light" href="<?php echo(base_url("public/otros/nuevos")) ?>">Nuevos</a>
+        <a class="btn text-light" href="<?php echo(base_url("public/otros/usados")) ?>">Usados</a>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Accesorios
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <a href="<?php echo(base_url("public/accesorios")) ?>" class="btn text-light">Accesorios</a>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
       </div>
       <!-- /.col-lg-3 -->
 
@@ -108,7 +125,7 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block img-fluid" src="<?php echo(base_url("public/img/usados.png"))?>" alt="First slide">
+              <img class="d-block img-fluid w-100" src="<?php echo(base_url("public/img/usados.png"))?>" alt="First slide">
             </div>
           </div>
         </div>

@@ -39,7 +39,9 @@ $routes->get('/otros/nuevos', 'OtrosNuevoController::buscar');
 $routes->get('/productos/nuevos', 'NuevosController::buscar');
 $routes->get('/productos/usados', 'UsadosController::buscar');
 $routes->get('/detalle/producto/(:any)', 'DetalleController::buscar/$1');
+$routes->get('/detalle/producto', 'DetalleController::buscarpgt');
 $routes->post('/pedido/nuevo', 'DetalleController::registrar');
+$routes->get('/contacto', 'ContactoController::index');
 
 $routes->get('/cambio_de_contraseña', 'CambioContraseñaController::index');
 $routes->get('/inicio_de_sesion', 'LoginController::index');
@@ -49,6 +51,7 @@ $routes->post('/registro/productos', 'RegistroController::registrar');
 $routes->get('/registro/eliminar/(:any)', 'RegistroController::eliminar/$1');
 $routes->post('/registro/editar/(:any)', 'RegistroController::editar/$1');
 $routes->get('/pedidos', 'PedidosController::buscar');
+$routes->get('/preguntas', 'PreguntasController::buscar');
 
 $routes->post('/inicio_de_sesion', 'LoginController::login');
 

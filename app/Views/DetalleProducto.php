@@ -144,11 +144,63 @@
             <br>
             <p><i class="fas fa-shield-alt fa-lg text-success"></i>&nbsp;&nbsp; 100% Producto recomendado</p>
             <p class="text-warning h1">&nbsp;&nbsp; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
+            <br>
+            <button class="btn btn-block" id="comprar" data-toggle="modal" data-target="#verModal<?php echo($producto["id"])?>">Comprar</button>
         </div>
     
     </div>
     <hr>
     <br>
+    <div class="row mt-5">
+    <div class="col-lg-1">
+    </div>
+    <?php if($producto["categoria"]==1 || $producto["categoria"]==2){?>
+    <div class="col-6 p-3">
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Descripción Principal</h2>
+    <br>
+    <table class="table table-warning caption-top">
+    <tbody>
+    <tr>
+      <th scope="row">MARCA</th>
+      <td>Xiaomi</td>
+    </tr>
+    <tr>
+      <th scope="row">LINEA</th>
+      <td>Redmi Note 8</td>
+    </tr>
+    <tr>
+      <th scope="row">PANTALLA</th>
+      <td>2080x1080 Pixeles</td>
+    </tr>
+    <tr>
+      <th scope="row">CÁMARA FRONTAL</th>
+      <td>32 Megapixeles</td>
+    </tr>
+    <tr>
+      <th scope="row">CÁMARA PRINCIPAL</th>
+      <td>48,20,16,5 Megapixeles</td>
+    </tr>
+    <tr>
+      <th scope="row">PROCESADOR</th>
+      <td>Snapdragon 735</td>
+    </tr>
+    <tr>
+      <th scope="row">RAM</th>
+      <td>4 GB</td>
+    </tr>
+    <tr>
+      <th scope="row">ALMACENAMIENTO</th>
+      <td>64 GB</td>
+    </tr>
+    <tr>
+      <th scope="row">BATERÍA</th>
+      <td>4,000 mAh</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    <?php } ?>
+    </div>
     <div class="row mt-5">
     <div class="col-lg-1">
     </div>
@@ -172,16 +224,27 @@
     </div>
     </div>
     <hr>
-    <div class="row mt-5">
-    <div class="col-lg-5 mx-auto p-3 mt-5">
-    <div class="divider-custom">
-      <div class="divider-custom-line"></div>
-      <div class="divider-custom-icon"><h2 class="text-center">HAZ TU PEDIDO</h2></div>
-      <div class="divider-custom-line"></div>
-    </div>
-    <br>
-                        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                        <form class="frmpedido" id="contactForm" name="sentMessage" novalidate="novalidate" method="POST" action="<?php echo(base_url("public/pedido/nuevo"))?>">
+
+
+<!-- Hacer pedido Modal -->
+<div class="portfolio-modal modal fade" id="verModal<?php echo($producto["id"])?>" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Modal - Title-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal2Label">HAZ TU PEDIDO</h2>                                        
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Text-->
+                                    <form class="frmpedido" id="contactForm" name="sentMessage" novalidate="novalidate" method="POST" action="<?php echo(base_url("public/pedido/nuevo"))?>">
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Nombre</label>
@@ -220,7 +283,7 @@
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Dirección</label>
-                                    <input class="form-control" id="phone" type="text" name="direccion" placeholder="Ejemplo... calle 56 #..." required="required" data-validation-required-message="Por favor ingrese su dirección." />
+                                    <input class="form-control" id="phone" type="text" name="direccion" placeholder="Direccción... calle 56 #..." required="required" data-validation-required-message="Por favor ingrese su dirección." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -231,8 +294,7 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-                            <br />
-                            <div id="success"></div>
+                            <br>
                             <div class="d-grid gap-2"><button class="btn btn-primary btn-xl" id="pedido" type="submit">Hacer pedido</button></div>
 
                         <!--Modal-->
@@ -248,14 +310,28 @@
                                                         <input class="form-control" id="phone" type="text" name="producto" value="<?= $producto["nombre"]?>"/>
                                                         <input class="form-control" id="phone" type="text" name="valor" value="<?= $producto["valor"]?>"/>
                                                         <div class="modal-footer">
-                                                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                                                            <a class="btn btn-danger" href="<?php echo(base_url("public/registro/eliminar/".$producto["id"])) ?>">Eliminar</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div> 
+                                            </div>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Cerrar Ventana
+                                    </button>
+                                </div>                 
 
                         </form>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+<!-- fin modal -->                        
+                        
                         <h4><?php session('mensaje') ?></h4>
                         <?php  if(session('mensaje')):?>
 
@@ -267,16 +343,56 @@
                         </div>
 
                         <?php endif ?>
-                    </div>
-                </div>
-            </div>                                            
-    </div>
+                    
+                
+                                                       
+    
     <?php endforeach ?>
+
+<div class="row mt-5">
+<div class="col-lg-1">
+</div>
+<div class="col-6 p-3">
+<form action="">
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Preguntas y Respuestas</h2>
+<div class="row mt-5">
+<div class="col-12 col-md-6">
+  <input type="text" class="form-control" id="pregunta" placeholder="Nombre" name="nombre" required>
+</div>
+<div class="col-12 col-md-6">
+<input type="email" class="form-control" id="pregunta" placeholder="Correo" name="correo" required>
+ </div>
+ </div>
+  <div class="form-group mt-3">
+    <textarea class="form-control" rows="3" name="pregunta" id="pregunta" placeholder="Pregunta.." required></textarea>
+  </div>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button class="btn" id="comprar">Preguntar</button>
+  </div> 
+</form> 
+</div>
 </div>
 
+<div class="row mt-5">
+<div class="col-lg-1">
+</div>
+<div class="col-6 p-3">
+<?php foreach($preguntas as $pregunta):?>
+<h3>Últimas realizadas</h3>
+<figure class="mt-3">
+  <blockquote class="blockquote mt-3">
+    <p><?php $pregunta["pregunta"] ?></p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+  <?php $pregunta["respuesta"] ?><cite title="Source Title"><?php $pregunta["fecha"] ?></cite>
+  </figcaption>
+</figure>
+<?php endforeach ?>
+</div>
+</div>
 
-      
-
+<!-- /.container -->
+</div>
   <!-- Footer -->
   <footer class="py-5 bg-dark mt-5">
     <div class="container">

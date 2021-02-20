@@ -66,10 +66,11 @@
 
 .menuletra li a{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 a{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+.categoria h2{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
 
 .card-title a{color: rgb(168, 110, 2);}
 
@@ -81,5 +82,14 @@ a{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sa
 .vlistado{color: rgb(34, 33, 39);}
 .vlistado:hover{color:  #EA7A0C;}
 
+#comprar{
+    background-color: #EA7A0C;
+    border-color: #EA7A0C;
+    color: #FFFFFF;
+    font-size: 1.2em;
+}
 
-
+#pregunta:focus{
+    border-color: #EA7A0C;
+    box-shadow: none;
+}

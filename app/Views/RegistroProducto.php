@@ -67,6 +67,12 @@
                                 <div class="sb-nav-link-icon"><i class="far fa-folder-open"></i></div>
                                 Pedidos
                             </a>
+                            <a class="nav-link" href="<?php echo(base_url("public/preguntas")) ?>">
+                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cone-striped" viewBox="0 0 16 16">
+                            <path d="M9.97 4.88l.953 3.811C10.158 8.878 9.14 9 8 9c-1.14 0-2.159-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.274 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z"/>
+                            </svg></div>
+                                Preguntas
+                            </a>
                             <div class="sb-sidenav-menu-heading">INTERFAZ</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -112,28 +118,22 @@
                             <li class="breadcrumb-item active">Registros</li>
                         </ol>
                         <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Nuevo Registro</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="" data-toggle="modal" data-target="#registro">Crear</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
+                        <div class="col-1">
+                                <div class="card-body"><i class="fas fa-folder-plus display-4 text-primary"></i><a class="text-dark stretched-link" data-toggle="modal" data-target="#registro" href="">Registrar</a></small></div>
                             </div>
                             <!-- ventana modal con formulario -->
-                <div class="modal fade" id="registro" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                            <div class="portfolio-modal modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
                             <div class="modal-content">
                                 <div class="modal-header bg-dark text-light">
-                                    <h5 class="modal-title" id="exampleModalLabel">Registro de Productos</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <h5 class="modal-title text-light" id="exampleModalLabel">Registro de Productos</h5>
+                                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <form method="POST" action="<?php echo(base_url("public/registro/productos"))?>">
                                 <div class="modal-body bg-secondary p-5 form-registro">
-                                <div class="row mt-3">
+                                <div class="row">
                                         <div class="col-12 col-md-6">
                                           <select class="form-control" name="categoria">
                                               <option value="0">Seleccione Categoria</option>
@@ -177,7 +177,39 @@
                                         <div class="form-group">
                                           <input type="text" class="form-control" placeholder="Url de la foto 5" name="foto5">
                                         </div>
-                                        
+                                        <h3 class="mt-3 text-light">Descripción Principal</h3>
+                                        <div class="row mt-3">
+                                        <div class="col-12 col-md-6">
+                                          <input type="text" class="form-control" placeholder="Marca" name="marca">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                          <input type="text" class="form-control" placeholder="Linea" name="linea">
+                                        </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                        <div class="col-12 col-md-6">
+                                          <input type="text" class="form-control" placeholder="Pantalla" name="pantalla">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                          <input type="text" class="form-control" placeholder="Cámara Frontal" name="camaraf">
+                                        </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                        <div class="col-12 col-md-6">
+                                          <input type="text" class="form-control" placeholder="Cámara Principal" name="camarap">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                          <input type="text" class="form-control" placeholder="Procesador" name="procesador">
+                                        </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                        <div class="col-12 col-md-6">
+                                          <input type="text" class="form-control" placeholder="Ram" name="ram">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                          <input type="text" class="form-control" placeholder="Almacenamiento" name="almacenamiento">
+                                        </div>
+                                        </div>
                                 </div>
                                 <div class="modal-footer bg-dark">
                                             <a type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</a>
@@ -191,46 +223,15 @@
 
 
 
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-secondary text-white mb-4">
-                                    <div class="card-body">Ir a la Página</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="<?php echo(base_url("public/celulares/usados")) ?>">Tecimpo</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
+                            <div class="col-1">
+                                    <div class="card-body"><img src="<?php echo(base_url("public/img/la t.png"))?>" height="57px"><small><a class="text-dark stretched-link" href="<?php echo(base_url("public/")) ?>">Tecimpo</a></small></div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Exportar a Excel</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Excel</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
+                            <div class="col-1">
+                                    <div class="card-body"><i class="fas fa-file-excel text-success display-4"></i><small><br><a class="text-dark stretched-link" href="#">Exportar</a></small></div>
                             </div>
                             
                         </div>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-area mr-1"></i>
-                                        Producto mas Vendido
-                                    </div>
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-bar mr-1"></i>
-                                        Ventas por Mes
-                                    </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <!-- Mensaje de registro -->
                         <h4><?php session('mensaje') ?></h4>
                         <?php  if(session('mensaje')):?>

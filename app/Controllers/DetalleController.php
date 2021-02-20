@@ -2,6 +2,7 @@
 
 use App\Models\Modelopedido;
 use App\Models\Modelolistado;
+use App\Models\Modelopreguntas;
 
 class DetalleController extends BaseController
 {
@@ -58,11 +59,29 @@ class DetalleController extends BaseController
 			$modeloPedido->insert($datosEnvio);
 			
 			$mensaje="El pedido se ha realizado exitosamente, muy pronto recibiras un correo de confirmación!! ";
-			return redirect()->to(base_url("public/detalle/producto"))->with('mensaje',$mensaje);
+			return redirect()->back()->with('mensaje',$mensaje);
 
 
 		}catch(\Exception $error){
 			echo($error->getMessage());
+		}
+	}
+
+	public function buscarpgt(){
+
+		$modeloPreguntas= new Modelopreguntas();
+
+		try{
+
+		$datosConsultados=$modeloPreguntas->findAll();
+
+		$datosParaVista=array("preguntas"=>$datosConsultados);
+
+		return view('DetalleProducto',$datosParaVista);
+
+		}catch(\Exception $error){
+
+		echo($error->getMessage());
 		}
 	}
 }
