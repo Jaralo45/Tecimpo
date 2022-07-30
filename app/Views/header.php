@@ -13,7 +13,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
   <link
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -34,22 +34,22 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <div class="col-4"></div>
-      <div class="col-4 d-flex" role="search">
-        <input class="form-control mr-2" type="search" placeholder="Buscar" name="buscar" aria-label="Search">
-        <button class="btn btn-outline-warning" type="submit" name="enviar">Buscar</button>
-        </div>
-      <ul class="navbar-nav ml-auto">
-<!-- Nav Item - User Information -->
-<li class="nav-item dropdown no-arrow">
-    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <a class="text-light text-decoration-none" href="<?php echo(base_url("public/inicio_de_sesion")) ?>">Ingresar</a>
-        <a class="text-light text-decoration-none" href="">/</a>
-        <a class="text-light text-decoration-none" href="">Registrarse</a>
-    </a>
-</li>
-</ul>
+    <div class="col-9"></div>
+        <form class="d-flex">
+            <button class="btn btn-outline-dark" type="submit">
+                <i class="fa fa-shopping-cart"></i>
+                Carrito
+                <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+            </button>
+        </form>
+
+        <form class="d-flex ml-1">
+            <a href="<?php echo(base_url("public/inicio_de_sesion"))?>" class="btn btn-outline-dark" type="submit">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                Ingresar
+            </a>
+        </form>
+
     </div>
   </div>
 </nav>

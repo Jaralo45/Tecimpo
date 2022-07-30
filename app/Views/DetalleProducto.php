@@ -98,7 +98,10 @@
                                                     echo("Usado");
                                                   }
                                                 ?></small><br>
-            <p class="display-4">$ <?= number_format($producto["valor"])?></p>
+            <?php if($producto["oferta"]==2) {?>
+            <h5><span class="text-muted text-decoration-line-through">$ <?= number_format($producto["valor"])?></h5><p class="display-4"></span>
+            $ <?= number_format($producto["valorOferta"])?></p><?php }else { ?>                                   
+            <p class="display-4">$ <?= number_format($producto["valor"])?></p><?php } ?>
             <hr>
             <br>
             <p><i class="fas fa-shipping-fast fa-lg"></i>&nbsp;&nbsp; Envíos a Medellin $10,000 fuera $15,000</p>
@@ -107,7 +110,7 @@
             <p><i class="fas fa-shield-alt fa-lg text-success"></i>&nbsp;&nbsp; 100% Producto recomendado</p>
             <p class="text-warning h1">&nbsp;&nbsp; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
             <br>
-            <button class="btn btn-block" id="comprar" data-toggle="modal" data-target="#verModal<?php echo($producto["id"])?>">Añadir al carrito</button>
+            <button class="btn btn-block" id="comprar" data-toggle="modal" data-target="#verModal<?php echo($producto["id"])?>">Agregar al carrito</button>
         </div>
     
     </div>
