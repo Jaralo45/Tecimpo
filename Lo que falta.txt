@@ -1,0 +1,14 @@
+TECIMPO
+
+Falta:
+
+■ Navbar
+■ Modal de registro
+■ Categorias
+■ Detalle por categoria
+■ Login
+■ Carrito
+■ Fotos de producto en detalle
+■ Almacenamiento de fotos
+
+Revisar "inner join"

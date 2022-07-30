@@ -7,7 +7,7 @@ class RegistroController extends BaseController
 {
 	public function index()
 	{
-		return view('RegistroProducto');
+		return view('TableroProductos');
 	}
 
 	public function buscar(){
@@ -20,7 +20,7 @@ class RegistroController extends BaseController
 
 		$datosParaVista=array("celusados"=>$datosConsultados);
 
-		return view('RegistroProducto',$datosParaVista);
+		return view('TableroProductos',$datosParaVista);
 
 		}catch(\Exception $error){
 
@@ -99,6 +99,22 @@ class RegistroController extends BaseController
 		$foto3=$this->request->getPost("foto3Editar");
 		$foto4=$this->request->getPost("foto4Editar");
 		$foto5=$this->request->getPost("foto5Editar");
+		$marca=$this->request->getPost("marcaEditar");
+		$linea=$this->request->getPost("lineaEditar");
+		$pantalla=$this->request->getPost("pantallaEditar");
+		$camaraf=$this->request->getPost("camarafEditar");
+		$camarap=$this->request->getPost("camarapEditar");
+		$procesador=$this->request->getPost("procesadorEditar");
+		$ram=$this->request->getPost("ramEditar");
+		$almacenamiento=$this->request->getPost("almacenamientoEditar");
+		$sistema=$this->request->getPost("sistemaEditar");
+		$resolucion=$this->request->getPost("resolucionEditar");
+		$graficos=$this->request->getPost("graficosEditar");
+		$disco=$this->request->getPost("discoEditar");
+		$bateria=$this->request->getPost("bateriaEditar");
+		$modelo=$this->request->getPost("modeloEditar");
+		$material=$this->request->getPost("materialEditar");
+		$color=$this->request->getPost("colorEditar");
 
 		$datosEnvio=array(
 			"nombre"=>$nombre,
@@ -111,7 +127,23 @@ class RegistroController extends BaseController
 			"foto2"=>$foto2,
 			"foto3"=>$foto3,
 			"foto4"=>$foto4,
-			"foto5"=>$foto5
+			"foto5"=>$foto5,
+			"marca"=>$marca,
+			"linea"=>$linea,
+			"pantalla"=>$pantalla,
+			"camaraf"=>$camaraf,
+			"camarap"=>$camarap,
+			"procesador"=>$procesador,
+			"ram"=>$ram,
+			"almacenamiento"=>$almacenamiento,
+			"sistema"=>$sistema,
+			"resolucion"=>$resolucion,
+			"graficos"=>$graficos,
+			"disco"=>$disco,
+			"bateria"=>$bateria,
+			"modelo"=>$modelo,
+			"material"=>$material,
+			"color"=>$color
 		);
 
 		$modeloListado= new Modelolistado();
@@ -120,7 +152,7 @@ class RegistroController extends BaseController
 			
 			$modeloListado->update($id,$datosEnvio);
 			
-			$mensaje="Que bien, los datos se han actualizado con exito!";
+			$mensaje="Que bien, los datos se han actualizado exitosamente!";
 			return redirect()->to(base_url("public/registro/productos"))->with('mensaje',$mensaje);
 
 

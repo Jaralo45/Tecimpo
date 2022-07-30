@@ -8,12 +8,15 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Usados Tecimpo</title>
+  <title>Celulares - Nuevos Tecimpo</title>
+
   <link rel="icon" href="<?php echo(base_url("public/img/la t.png"))?>">
 
 </head>
+
 <body>
-  <?php include("header.php"); ?>
+
+<?php include("header.php"); ?>
   <!-- Page Content -->
 <div class="container-fluid">
 
@@ -86,23 +89,16 @@
 
       <div class="col-lg-10 mt-4">
 
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <img class="d-block img-fluid w-100" src="<?php echo(base_url("public/img/usados.png"))?>" alt="First slide">
-            </div>
-          </div>
-        </div>
 
-        <div class="row mt-5">
+        <div class="row">
           <?php foreach($productos as $producto):?>
             <?php 
               $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
               $aleatorio = "t".substr(str_shuffle($permitted_chars), 0, 10); ?>
-            <?php if($producto["estado"]==2){ ?>
+            <?php if($producto["categoria"]==6){ ?>
           <div class="col-lg-3 col-md-6 mb-4">
             <div class="card h-100">
-              <a class="a_transicion" href="<?php echo(base_url("public/detalle/producto/".$producto["id"].$aleatorio))?>"><img class="card-img-top p-3" src="<?= $producto["foto"] ?>" height="250px" alt=""><img class="card-img-top p-3" src="<?= $producto["foto2"] ?>" height="250px" alt=""></a>
+            <a class="a_transicion" href="<?php echo(base_url("public/detalle/producto/".$producto["id"].$aleatorio))?>"><img class="card-img-top p-3" src="<?= $producto["foto"] ?>" height="250px" alt=""><img class="card-img-top p-3" src="<?= $producto["foto2"] ?>" height="250px" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="<?php echo(base_url("public/detalle/producto/".$producto["id"].$aleatorio)) ?>"><?= $producto["nombre"]?></a>
@@ -110,23 +106,26 @@
                 <p class="card-text"><?= $producto["descripcion"]?></p>
                 <h5>$ <?= number_format($producto["valor"])?></h5>
               </div>
+
             </div>
           </div>
           <?php } ?>
           <?php endforeach?>
+          
+
         </div>
         <!-- /.row -->
-       
 
       </div>
       <!-- /.col-lg-9 -->
 
     </div>
     <!-- /.row -->
+
   </div>
   <!-- /.container -->
 
-<?php  include("footer.php") ?>
+<?php include("footer.php"); ?>
 
 </body>
 

@@ -2,28 +2,30 @@
 
 use App\Models\Modelolistado;
 
-class DetalleController extends BaseController
+class ComputadoresUController extends BaseController
 {
+
 	public function index()
 	{
-		return view('DetalleProducto');
+		return view('ComputadoresUsados');
 	}
 
-	public function buscar($id){
+	public function buscar(){
 
 		$modeloListado= new Modelolistado();
 
 		try{
 
-		$datosConsultados=$modeloListado->where('id',$id)->findAll();
+		$datosConsultados=$modeloListado->findAll();
 
 		$datosParaVista=array("productos"=>$datosConsultados);
 
-		return view('DetalleProducto',$datosParaVista);
+		return view('ComputadoresUsados',$datosParaVista);
 
 		}catch(\Exception $error){
 
 		echo($error->getMessage());
 		}
 	}
+
 }

@@ -7,13 +7,17 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Pedidos - Tablero de Control</title>
+        <link rel="icon" href="<?php echo(base_url("public/img/la t.png"))?>">
+
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+        
         <link href="<?php echo(base_url("public/css/dash.css"))?>" rel="stylesheet" />
         <link href="<?php echo(base_url("public/css/styles.css"))?>" rel="stylesheet" />
-        <link rel="icon" href="<?php echo(base_url("public/img/la t.png"))?>">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+        
+        
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">

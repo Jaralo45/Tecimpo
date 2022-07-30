@@ -10238,3 +10238,18 @@ form .row:first-child .floating-label-form-group {
 .copyright {
   background-color: #1a252f;
 }
+
+.social-bar {
+	position: fixed;
+	right: 0;
+	top: 80%;
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 100;
+}
+
+.social-bar a img{
+    width: 65px;
+}
