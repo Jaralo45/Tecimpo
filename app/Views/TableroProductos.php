@@ -121,9 +121,9 @@
     <li class="breadcrumb-item active">Registros</li>
 </ol>
 <div class="d-grid gap-2 d-md-block">
-    <a class="btn btn-outline-secondary" href="<?php echo(base_url("public/registro/productos/nuevo")) ?>">Registrar nuevo producto</a>
-    <a class="btn btn-outline-warning" href="<?php echo(base_url("public/")) ?>">Ir a la página</a>
-    <a class="btn btn-outline-success" href="#">Exportar lista de productos</a>
+    <a class="btn btn-outline-secondary" href="<?php echo(base_url("public/registro/productos/nuevo")) ?>"><i class="fa fa-plus-circle" aria-hidden="true"></i> Registro nuevo</a>
+    <a class="btn btn-outline-warning" href="<?php echo(base_url("public/")) ?>"><i class="fa fa-link" aria-hidden="true"></i> Ir a la página</a>
+    <a class="btn btn-outline-success" href="#"><i class="fa fa-download" aria-hidden="true"></i> Exportar</a>
 </div>
 
 <!-- Mensaje de registro -->
@@ -303,6 +303,20 @@
             <div class="col-12 col-md-6">
                 <label>Foto 5:</label>
                     <input class="form-control" type="text" name="foto5Editar" value="<?= $producto["foto5"] ?>">
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-12 col-md-6">
+            <label>Oferta</label>
+                <select class="form-control" name="ofertaEditar">
+                    <option value="<?= $producto["oferta"] ?>">Seleccione Estado</option>
+                    <option value="1">No</option>
+                    <option value="2">Si</option>
+                </select>
+            </div>
+            <div class="col-12 col-md-6">
+                <label>Valor Oferta</label>
+                    <input class="form-control" type="text" name="valorOfertaEditar" value="<?= $producto["valorOferta"] ?>">
             </div>
             </div>
 

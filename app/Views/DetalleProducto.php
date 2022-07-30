@@ -110,7 +110,7 @@
             <p><i class="fas fa-shield-alt fa-lg text-success"></i>&nbsp;&nbsp; 100% Producto recomendado</p>
             <p class="text-warning h1">&nbsp;&nbsp; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
             <br>
-            <button class="btn btn-block" id="comprar" data-toggle="modal" data-target="#verModal<?php echo($producto["id"])?>">Agregar al carrito</button>
+            <button class="btn btn-block" id="comprar" data-toggle="modal" data-target="#verModal<?php echo($producto["id"])?>"><i class="fa fa-shopping-cart"></i> Agregar al carrito</button>
         </div>
     
     </div>

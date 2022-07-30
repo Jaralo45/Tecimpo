@@ -171,6 +171,18 @@
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Url de la foto 5" name="foto5">
             </div>
+            <div class="row mt-3">
+            <div class="col-6 col-md-6">
+                <select class="form-control" name="oferta">
+                    <option value="0">Es Oferta</option>
+                    <option value="1">No</option>
+                    <option value="2">Si</option>
+                </select>
+            </div>
+            <div class="col-6 col-md-6">
+                    <input class="form-control" type="text" name="valorOferta" placeholder="Valor Oferta">
+            </div>
+            </div>
 
 <!-- acordion de caracteristicas -->
 <div class="accordion accordion-flush" id="accordionFlushExample">

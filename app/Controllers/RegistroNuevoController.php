@@ -40,6 +40,8 @@ class RegistroNuevoController extends BaseController
 		$modelo=$this->request->getPost("modelo");
 		$material=$this->request->getPost("material");
 		$color=$this->request->getPost("color");
+		$oferta=$this->request->getPost("oferta");
+		$valorOferta=$this->request->getPost("valorOferta");
 
 		$datosEnvio=array(
 			"nombre"=>$nombre,
@@ -69,7 +71,9 @@ class RegistroNuevoController extends BaseController
 			"bateria"=>$bateria,
 			"modelo"=>$modelo,
 			"material"=>$material,
-			"color"=>$color
+			"color"=>$color,
+			"oferta"=>$oferta,
+			"valorOferta"=>$valorOferta
 		);
 
 		$modeloListado= new Modelolistado();

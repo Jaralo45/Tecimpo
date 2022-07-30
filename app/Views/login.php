@@ -25,11 +25,11 @@
 
           <fieldset class="clearfix">
 
-            <p ><span class="fa fa-user"></span><input type="text"  Placeholder="Username" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-            <p><span class="fa fa-lock"></span><input type="password"  Placeholder="Password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+            <p ><span class="fa fa-user"></span><input type="text"  Placeholder="Correo" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+            <p><span class="fa fa-lock"></span><input type="password"  Placeholder="Contraseña" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
             
              <div>
-                                <span style="width:48%; text-align:left;  display: inline-block;"><a class="small-text" href="#">Olvidaste tu contraseña?</a></span>
+                                <span style="width:48%; text-align:left;  display: inline-block;"><a class="small-text" href="#">Olvidaste tu contraseña?</a><a class="small-text" href="#">Registrate!</a></span>
                                 <span style="width:50%; text-align:right;  display: inline-block;"><input type="submit" value="INICIAR"></span>
                             </div>
 

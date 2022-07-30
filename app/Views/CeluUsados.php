@@ -98,13 +98,21 @@
             <?php if($producto["categoria"]==2){ ?>
           <div class="col-lg-3 col-md-6 mb-4">
             <div class="card h-100">
-            <a class="a_transicion" href="<?php echo(base_url("public/detalle/producto/".$producto["id"].$aleatorio))?>"><img class="card-img-top p-3" src="<?= $producto["foto"] ?>" height="250px" alt=""><img class="card-img-top p-3" src="<?= $producto["foto2"] ?>" height="250px" alt=""></a>
+            <?php if($producto["oferta"]==2) {?>
+            <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div><?php } ?>
+              <a class="a_transicion" href="<?php echo(base_url("public/detalle/producto/".$producto["id"].$aleatorio))?>"><img class="card-img-top p-3" src="<?= $producto["foto"] ?>" height="250px" alt=""><img class="card-img-top p-3" src="<?= $producto["foto2"] ?>" height="250px" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="<?php echo(base_url("public/detalle/producto/".$producto["id"].$aleatorio)) ?>"><?= $producto["nombre"]?></a>
                 </h4>
                 <p class="card-text"><?= $producto["descripcion"]?></p>
-                <h5>$ <?= number_format($producto["valor"])?></h5>
+                <?php if($producto["oferta"]==2) {?>
+                  <h5><span class="text-muted text-decoration-line-through">$ <?= number_format($producto["valor"])?></span>
+                  $ <?= number_format($producto["valorOferta"])?></h5><?php }else { ?>
+                <h5>$ <?= number_format($producto["valor"])?></h5><?php } ?>
+              </div>
+              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                  <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
               </div>
             </div>
           </div>
